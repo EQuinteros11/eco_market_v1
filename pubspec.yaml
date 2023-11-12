@@ -49,6 +49,7 @@ dependencies:
   awesome_snackbar_content:
 
   flutter_native_splash: ^2.3.2
+  flutter_launcher_icons: ^0.13.1
 
 flutter_native_splash:
   android: true
@@ -57,6 +58,11 @@ flutter_native_splash:
   color: "#AFDCF2"
   background_image: "assets/img/creacionCuentaCliente.png"
   image: "assets/img/logoSplash.png"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/img/logoSplash.png"
 
 dev_dependencies:
   flutter_test:

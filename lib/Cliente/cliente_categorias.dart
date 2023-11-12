@@ -24,7 +24,6 @@ class _ClienteCategoriasState extends State<ClienteCategorias> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.height,
           padding: const EdgeInsets.symmetric( horizontal: 15, vertical: 5 ),
           decoration: const BoxDecoration(
               image: DecorationImage(
