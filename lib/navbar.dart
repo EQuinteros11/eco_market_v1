@@ -6,6 +6,9 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:uno/Cliente/cliente_recomendaciones.dart';
 import 'package:uno/vista_principal.dart';
 
+import 'Pages/pedidos_lista.dart';
+import 'models/global_var.dart';
+
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
 
@@ -18,7 +21,7 @@ class NavBar extends StatelessWidget {
         children: [
           UserAccountsDrawerHeader(
             accountName: const Text('ECO MARKET'),
-            accountEmail: const Text('(NombreUsuarioActivo)'),
+            accountEmail:  Text(ver),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(child: Image.asset('assets/menu/Logo.jpg')),
             ),
@@ -42,7 +45,7 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.shopping_cart, color: Colors.cyan, size: 30.0),
             title: const Text('Mis Compras'),
-            onTap: () => Navigator.push( context, MaterialPageRoute(builder: (context) => const ClienteCarrito() )
+            onTap: () => Navigator.push( context, MaterialPageRoute(builder: (context) =>  Cart() )
             ),
           ),
           ListTile(
