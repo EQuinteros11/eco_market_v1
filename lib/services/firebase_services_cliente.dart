@@ -21,6 +21,7 @@ Future<List> getTiendas() async {
 }
 
 
+
 Future<List> getProductos() async {
   List productos = [];
   final citiesRef = db.collection("productos");
@@ -50,7 +51,7 @@ Future<List> getCarrito() async {
 Future<List> getContar() async{
   List carro = [];
   final contar =db.collection("carrito");
-  final CountCar = contar.where("cliente", isEqualTo: "ivan@gmail.com");
+  final CountCar = contar.where("cliente", isEqualTo: ver);
   QuerySnapshot queryTiendas = await CountCar.get();
   queryTiendas.docs.forEach( ( carrito ) {
     carro.add( carrito.data());
