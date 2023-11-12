@@ -34,7 +34,6 @@ class _CartState extends State<Cart> {
         ),
        body: SingleChildScrollView(
           child: Container(
-            height: MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/img/listadoTiendasCliente.png"),
@@ -107,13 +106,13 @@ class _CartState extends State<Cart> {
                   child:Column(
                     children:<Widget> [
                       GridView.builder(
+                          physics: const ScrollPhysics(),
                           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount (
                             crossAxisCount: 1,
                             childAspectRatio: ( 3.0 ),
                             crossAxisSpacing: 15,
                             mainAxisSpacing: 5,
                           ),
-                          physics: const ScrollPhysics(),
                           itemCount: snapshot.data?.length,
                           scrollDirection: Axis.vertical,
                           shrinkWrap: true,
