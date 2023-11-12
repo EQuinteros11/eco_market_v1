@@ -34,6 +34,7 @@ class _CartState extends State<Cart> {
         ),
        body: SingleChildScrollView(
           child: Container(
+            height: MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/img/listadoTiendasCliente.png"),

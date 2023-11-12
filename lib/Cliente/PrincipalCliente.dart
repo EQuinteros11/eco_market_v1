@@ -7,6 +7,7 @@ import 'package:uno/Cliente/cliente_ofertas.dart';
 import 'package:uno/Cliente/cliente_recomendaciones.dart';
 import 'package:uno/Cliente/cliente_tiendas.dart';
 import 'package:uno/Cliente/inicio_sesion_cliente.dart';
+import 'package:uno/Pages/pedidos_lista.dart';
 import 'package:uno/inicio_sesion_vendedor.dart';
 import 'package:uno/navbar.dart';
 import 'package:uno/seleccion_creacion_tipo_cuenta.dart';
@@ -275,7 +276,7 @@ class _VistaPrincipalClienteState extends State<VistaPrincipalCliente> {
                                   // Contexto
                                   context,
                                   // Redireccionamiento
-                                  const ClienteListadoTiendas()
+                                  Cart()
                                 )
                               ]
                           ),
