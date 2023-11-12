@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:uno/Cliente/cliente_buscar_producto.dart';
 import 'package:uno/Cliente/cliente_carrito.dart';
+import 'package:uno/Cliente/cliente_categorias.dart';
 import 'package:uno/Cliente/cliente_ofertas.dart';
 import 'package:uno/Cliente/cliente_recomendaciones.dart';
 import 'package:uno/Cliente/cliente_tiendas.dart';
@@ -327,7 +328,7 @@ class _VistaPrincipalClienteState extends State<VistaPrincipalCliente> {
                                       size: 35,
                                     ),
                                   context,
-                                    const InicioSesionCliente()
+                                    const ClienteCategorias()
                                 ),
                                 Boton(
                                   "Tiendas",

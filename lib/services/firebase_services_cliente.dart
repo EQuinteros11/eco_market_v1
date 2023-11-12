@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:uno/models/productos_model_line.dart';
 
 import '../models/global_var.dart';
@@ -18,6 +19,8 @@ Future<List> getTiendas() async {
 
   return tiendas;
 }
+
+
 Future<List> getProductos() async {
   List productos = [];
   final citiesRef = db.collection("productos");
@@ -43,6 +46,7 @@ Future<List> getCarrito() async {
   });
   return carro;
 }
+
 Future<List> getContar() async{
   List carro = [];
   final contar =db.collection("carrito");
@@ -54,8 +58,30 @@ Future<List> getContar() async{
   return carro;
 }
 
+Future<List> getCategorias() async {
+  List categorias = [];
+  CollectionReference collectionReferenceTiendas = db.collection('categoria');
+  collectionReferenceTiendas.orderBy('Nombre', descending: true);
 
+  QuerySnapshot queryTiendas = await collectionReferenceTiendas.get();
+  queryTiendas.docs.forEach( ( categoria ) {
+    categorias.add( categoria.data() );
+  });
 
+  return categorias;
+}
 
+Future<List> getCategorias2() async {
+  List categorias = [];
+  CollectionReference collectionReferenceTiendas = db.collection('ctl_Tienda');
+  collectionReferenceTiendas.orderBy('categoria', descending: true);
 
+  QuerySnapshot queryCategorias = await collectionReferenceTiendas.get();
+  queryCategorias.docs.forEach( ( categoria ) {
+    categorias.add({categoria.get("categoria")});
+    // print(categoria.get("categoria").toString());
+  });
 
+  print(categorias);
+  return categorias;
+}

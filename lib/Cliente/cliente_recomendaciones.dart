@@ -93,7 +93,7 @@ class _ClienteRecomendacionState extends State<ClienteRecomendacion> {
             ),
           ),
         ),
-      )
+      ),
     );
   }
 }

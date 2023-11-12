@@ -5,6 +5,7 @@ import 'package:uno/creacion_cuenta_vendedor.dart';
 import 'package:uno/seleccion_creacion_tipo_cuenta.dart';
 import 'package:uno/vista_principal.dart';
 
+import 'Cliente/cliente_categorias.dart';
 import 'Cliente/inicio_sesion_cliente.dart';
 import 'Pages/otra_pagina.dart';
 import 'Pages/pedidos_lista.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget{
           "InicioSesionCliente": (context) => MyAppForm(),
           "vistaPrincipalCliente": (context) => VistaPrincipalCliente(),
           "vistaClienteRecomendacion": (context) => ClienteRecomendacion(),
+          "vistaClienteCategorias": (context) => ClienteCategorias(),
         },
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(73, 80, 91, 1.0)),
