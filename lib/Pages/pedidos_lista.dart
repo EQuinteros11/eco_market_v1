@@ -10,6 +10,7 @@ import 'package:uno/services/firebase_services_cliente.dart';
 
 import '../models/carro.dart';
 import '../navbar.dart';
+import 'PantallaPago.dart';
 
 class Cart extends StatefulWidget {
   @override
@@ -324,7 +325,14 @@ class _CartState extends State<Cart> {
                                  borderRadius: BorderRadius.all(Radius.circular(10))),
                            ),
                            child: Text("Comprar"),
-                           onPressed: () =>{},)
+                           onPressed: () =>{
+                           Navigator.push(
+                           context,
+                           MaterialPageRoute(
+                           builder: (context) => PantallaPago(montoTotal: totall),
+                           ),
+                           )
+                           },)
                         ],
                       ),
 
